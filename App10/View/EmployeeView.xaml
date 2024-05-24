@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App10.View.EmployeeView" Title="Employee View Page">
+    
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            
+            <!--Entry Form for ID-->
+            <Label Text="ID:" FontAttributes="Bold"/>
+           
+            <!--Entry Form for Name-->
+            <Label Text="Name:" FontAttributes="Bold"/>
+            <Entry x:Name="employeeName" Placeholder="Please your Name."/>
+
+            <!--Entry Form for Email-->
+            <Label Text="Email:" FontAttributes="Bold"/>
+            <Entry x:Name="employeeEmail" Placeholder="Please your Email."/>
+
+            <!--Entry Form for Address-->
+            <Label Text="Address:" FontAttributes="Bold"/>
+            <Entry x:Name="employeeAddress" Placeholder="Please Your Address."/>
+            
+            <!--Button for submission-->
+            <Button Text="Save Record" Clicked="btnSaveUpdate_Clicked" Padding="10"/>
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+    
+    
+</ContentPage>

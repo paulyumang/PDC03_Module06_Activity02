@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App10.View.ShowEmployeePage" Title="Show Employees">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <!--Button for Adding Employee-->
+            <Button Text="Add New Employee" Clicked="AddEmployee"/>
+            
+            <ListView x:Name="lstData" HasUnevenRows="True" ItemSelected="lstData_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <Grid>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                        <ColumnDefinition></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="0"/>
+                                    <Label Text="{Binding Email}" Grid.Row="0" Grid.Column="1"/>
+                                    <Label Text="{Binding Address}" Grid.Row="0" Grid.Column="2"/>
+
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
